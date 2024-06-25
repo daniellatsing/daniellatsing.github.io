@@ -10,7 +10,7 @@
 
 @font-face {
   font-family: "Satoshi";
-  src: url("../../public/fonts/Fonts/TTF/Satoshi-Variable.ttf");
+  src: url("/fonts/Fonts/TTF/Satoshi-Variable.ttf") format("truetype");
 }
 
 @media (prefers-color-scheme: light) {
@@ -23,15 +23,18 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
+  /* background: linear-gradient(
       to bottom,
       transparent,
       rgb(var(--background-end-rgb))
     )
-    rgb(var(--background-start-rgb));
+    rgb(var(--background-start-rgb)); */
 }
 
 @layer utilities {
+  .font-satoshi {
+    font-family: "Satoshi", sans-serif;
+  }
   .text-balance {
     text-wrap: balance;
   }

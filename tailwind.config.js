@@ -15,21 +15,21 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    colors: {
-      transparent: 'transparent',
-      'white': '#fbfdfe',
-      'feldgrau': '#425a4a',
-      'french-gray': '#d9d9d9',
-      'silver': '#b9b9b9',
-      'paynes-gray': '#5c657a',
-      'night': '#0b100d',
-      'davys-grey': '#4e4e4e',
-      'charcoal': '#3d5364',
-    },
     extend: {
       fontFamily: {
         satoshi: ["Satoshi", "sans-serif"]
-      }
+      },
+      colors: {
+        transparent: 'transparent',
+        'white': '#fbfdfe',
+        'feldgrau': '#425a4a',
+        'french-gray': '#d9d9d9',
+        'silver': '#b9b9b9',
+        'paynes-gray': '#5c657a',
+        'night': '#0b100d',
+        'davys-grey': '#4e4e4e',
+        'charcoal': '#3d5364',
+      },
     },
   },
   plugins: [

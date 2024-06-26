@@ -11,7 +11,7 @@ export default function NavBar() {
                 </a>
             </div>
             <div className="flex justify-center gap-4 sm:gap-8 items-center font-bold text-2xl text-night">
-                <a href="#home" className="hover:text-indigo-500 dark:hover:text-indigo-400 transition duration-300 ease-in-out transform hover:-translate-y-1">home</a>
+                <a href="/" className="hover:text-indigo-500 dark:hover:text-indigo-400 transition duration-300 ease-in-out transform hover:-translate-y-1">home</a>
                 <a href="#about" className="hover:text-indigo-500 dark:hover:text-indigo-400 transition duration-300 ease-in-out transform hover:-translate-y-1">about</a>
                 <a href="#experience" className="hover:text-indigo-500 dark:hover:text-indigo-400 transition duration-300 ease-in-out transform hover:-translate-y-1">experience</a>
                 <a href="#works" className="hover:text-indigo-500 dark:hover:text-indigo-400 transition duration-300 ease-in-out transform hover:-translate-y-1">works</a>

@@ -1867,6 +1867,16 @@ hasown@^2.0.0, hasown@^2.0.1, hasown@^2.0.2:
   dependencies:
     function-bind "^1.1.2"
 
+headlessui@^0.0.0:
+  version "0.0.0"
+  resolved "https://registry.yarnpkg.com/headlessui/-/headlessui-0.0.0.tgz#bffbc91c40e9a6fa09c1e6064caaa670cabc68c0"
+  integrity sha512-CHvacVPbl8AqIg2sBNKySUmumu7o15jSrCaTrIh9GW2Eq4y/krCN/vZFOsKCwlrhWQbO4267a8xvvP8bs+qREQ==
+
+heroicons@^2.1.4:
+  version "2.1.4"
+  resolved "https://registry.yarnpkg.com/heroicons/-/heroicons-2.1.4.tgz#f01bdac64ca12051bcec53a47c46dfe5164c4446"
+  integrity sha512-427upVrmqpVzupO1ZSRyVpn2UtWRDzfgIXJm8LMDkswKERjWWyNa94fp1OlDcUR9ULsMp93OB0p08+WOJXUNEA==
+
 hoist-non-react-statics@^3.3.1:
   version "3.3.2"
   resolved "https://registry.npmjs.org/hoist-non-react-statics/-/hoist-non-react-statics-3.3.2.tgz"

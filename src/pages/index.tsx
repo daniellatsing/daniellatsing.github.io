@@ -31,6 +31,9 @@ export default function Home() {
             <div className="w-full border border-french-gray dark:border-secondary-dark mt-16 mb-28" />
             <div id="works" className="z-10 w-full max-w-7xl lg:flex">
                 <p className="text-5xl text-feldgrau font-bold">works</p>
+                {/* <div className="grid-cols-3 border">
+                    <div className=""></div>
+                </div> */}
             </div>
             <div className="w-full border border-french-gray dark:border-secondary-dark mt-24 mb-52" />
         </main>

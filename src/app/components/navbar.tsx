@@ -59,16 +59,16 @@ export default function NavBar() {
             <div className="flex justify-center sm:gap-8 items-center font-bold text-2xl text-night">
                 <a href="/" className="hover:text-indigo-500 dark:hover:text-indigo-400 transition duration-300 ease-in-out transform hover:-translate-y-1">home</a>
                 <a href="/about" className="hover:text-indigo-500 dark:hover:text-indigo-400 transition duration-300 ease-in-out transform hover:-translate-y-1">about</a>
-                <div className="relative">
+                <div className="">
                     <button type="button" id="menu-button" aria-expanded={dropdownOpen} aria-haspopup="true" onClick={toggleDropdown}>
                         works
-                        <ExpandMoreRoundedIcon className="ml-1" />
+                        <ExpandMoreRoundedIcon className="size-8" />
                     </button>
                     {dropdownOpen && (
                         <div className="absolute mt-2 bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600" role="menu" aria-orientation="vertical" aria-labelledby="menu-button">
                             <div className="py-2 text-sm text-night">
                                 {worksItems.map((item) => (
-                                    <a key={item.name} href={item.link} className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white hover:text-indigo-500 dark:hover:text-indigo-400">
+                                    <a key={item.name} href={item.link} className="block px-3 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white hover:text-indigo-500 dark:hover:text-indigo-400">
                                         {item.name}
                                     </a>
                                 ))}

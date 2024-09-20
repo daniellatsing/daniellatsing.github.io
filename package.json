@@ -14,6 +14,7 @@
     "@mui/icons-material": "^5.15.20",
     "@mui/material": "^5.15.20",
     "@svgr/webpack": "^8.1.0",
+    "all": "^0.0.0",
     "clsx": "^2.1.1",
     "framer-motion": "^11.2.10",
     "headlessui": "^0.0.0",

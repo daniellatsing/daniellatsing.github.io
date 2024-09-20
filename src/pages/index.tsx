@@ -45,36 +45,42 @@ export default function Home() {
             date: "2024",
             description: "Mobile & Design",
             header: projectNames(HHCImage, "HerHeartCo Prototype"),
+            link: "/works/herheartco"
         },
         {
             title: "Garden Time",
             date: "2024",
             description: "Web",
             header: projectNames(GTImage, "Garden Time Prototype"),
+            link: "/works/garden-time"
         },
         {
             title: "Muslim Student Association",
             date: "2023",
             description: "Web",
             header: projectNames(MSAImage, "Muslim Student Association (MSA) Prototype"),
+            link: "/works/msa"
         },
         {
             title: "Case Study: Carmax",
             date: "2023",
             description: "Design",
             header: projectNames(CarmaxImage, "Carmax Prototype"),
+            link: "/works/carmax"
         },
         {
             title: "Dear.M Journal",
             date: "2023",
             description: "Web",
             header: projectNames(DearMImage, "DearM Prototype"),
+            link: "/works/dear-m-journal"
         },
         {
             title: "Indicators of Diabetes",
             date: "2022",
             description: "Shiny App & Data Analysis",
-            header: projectNames(ShinyImage, "Shiny App Image")
+            header: projectNames(ShinyImage, "Shiny App Image"),
+            link: "/works/indicators-of-diabetes"
         }
     ]
     
@@ -98,6 +104,7 @@ export default function Home() {
                             title={card.title}
                             date={card.date}
                             description={card.description}
+                            link={card.link}
                         />
                     ))}
                 </BentoGrid>

@@ -4,15 +4,15 @@ const plugin = require('tailwindcss/plugin')
 
 module.exports = {
   content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
-    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/pages/**/*.{js,ts,jsx,tsx,mdx, mjs}",
+    "./src/components/**/*.{js,ts,jsx,tsx,mdx,mjs}",
+    "./src/app/**/*.{js,ts,jsx,tsx,mdx,mjs}",
+    "./app/**/*.{js,ts,jsx,tsx,mdx,mjs}",
+    "./pages/**/*.{js,ts,jsx,tsx,mdx,mjs}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx,mjs}",
  
     // Or if using `src` directory:
-    "./src/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/**/*.{js,ts,jsx,tsx,mdx,mjs}",
   ],
   theme: {
     extend: {
@@ -21,14 +21,16 @@ module.exports = {
       },
       colors: {
         transparent: 'transparent',
-        'white': '#fbfdfe',
-        'feldgrau': '#425a4a',
+        'white': '#fefefe',
+        'white-two': '#fbfbfd',
+        'anti-flash-white': '##e2e2e2',
+        'reseda-green': '#627a60',
         'french-gray': '#d9d9d9',
         'silver': '#b9b9b9',
-        'paynes-gray': '#5c657a',
+        'paynes-gray': '#576978',
         'night': '#0b100d',
         'davys-grey': '#4e4e4e',
-        'charcoal': '#3d5364',
+        'ash-gray': '#a4d4d4'
       },
     },
   },

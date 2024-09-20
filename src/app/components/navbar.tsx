@@ -1,6 +1,7 @@
-import Image from 'next/image';
+import Image from "next/image";
 import Logo from "../logo.svg";
-import ExpandMoreRoundedIcon from '@mui/icons-material/ExpandMoreRounded';import { FloatingNav } from './ui/floating-navbar';
+import ExpandMoreRoundedIcon from "@mui/icons-material/ExpandMoreRounded";
+import { FloatingNav } from "./ui/floating-navbar";
 
 import React, { useState } from 'react';
 
@@ -46,6 +47,10 @@ export default function NavBar() {
         { 
             name: "Dear.m Journal", 
             link: "/works/dear-m-journal" 
+        },
+        {
+            name: "Indicators of Diabetes",
+            linke: "/works/indicators-of-diabetes"
         }
     ];
 
@@ -57,18 +62,18 @@ export default function NavBar() {
                 </a>
             </div>
             <div className="flex justify-center sm:gap-8 items-center font-bold text-2xl text-night">
-                <a href="/" className="hover:text-indigo-500 dark:hover:text-indigo-400 transition duration-300 ease-in-out transform hover:-translate-y-1">home</a>
-                <a href="/about" className="hover:text-indigo-500 dark:hover:text-indigo-400 transition duration-300 ease-in-out transform hover:-translate-y-1">about</a>
-                <div className="">
+                <a href="/" className="hover:text-ash-gray dark:hover:text-indigo-400 transition duration-300 ease-in-out transform hover:-translate-y-1">home</a>
+                <a href="/about" className="hover:text-ash-graydark:hover:text-indigo-400 transition duration-300 ease-in-out transform hover:-translate-y-1">about</a>
+                <div className="hover:text-ash-gray dark:hover:text-indigo-400 transition duration-300 ease-in-out transform hover:-translate-y-1">
                     <button type="button" id="menu-button" aria-expanded={dropdownOpen} aria-haspopup="true" onClick={toggleDropdown}>
                         works
-                        <ExpandMoreRoundedIcon className="size-8" />
+                        <ExpandMoreRoundedIcon className={`size-8 transition-transform duration-300 ${dropdownOpen ? 'rotate-180' : ''}`} />
                     </button>
                     {dropdownOpen && (
                         <div className="absolute mt-2 bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600" role="menu" aria-orientation="vertical" aria-labelledby="menu-button">
                             <div className="py-2 text-sm text-night">
                                 {worksItems.map((item) => (
-                                    <a key={item.name} href={item.link} className="block px-3 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white hover:text-indigo-500 dark:hover:text-indigo-400">
+                                    <a key={item.name} href={item.link} className="block px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-600 dark:hover:text-white hover:text-paynes-gray dark:hover:text-indigo-400">
                                         {item.name}
                                     </a>
                                 ))}
@@ -77,7 +82,7 @@ export default function NavBar() {
                     )}
                 </div>
                 <button className="border border-davys-gray py-2 px-4 rounded-full shadow-sm transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-md">
-                    <a href="https://drive.google.com/file/d/1aXOJIailit-5V0jgALfyzuRcnFywWBiG/view?usp=sharing" className="hover:text-indigo-500 dark:hover:text-indigo-400 self-center">resume</a>
+                    <a href="https://drive.google.com/file/d/1LTKQe8D7K2CPIuEN9msG08PbAZuoispc/view?usp=sharing" className="hover:text-ash-gray dark:hover:text-indigo-400 place-self-center">resume</a>
                 </button>
             </div>
             <FloatingNav navItems={navItems}/>

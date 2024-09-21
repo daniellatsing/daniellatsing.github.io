@@ -33,11 +33,11 @@ export default function NavBar() {
             link: "/works/herheartco" 
         },
         { 
-            name: "Garden Time", 
+            name: "Garden Time",
             link: "/works/garden-time" 
         },
         { 
-            name: "Muslim Student Association", 
+            name: "Muslim Student Association",
             link: "/works/msa" 
         },
         { 
@@ -50,7 +50,7 @@ export default function NavBar() {
         },
         {
             name: "Indicators of Diabetes",
-            linke: "/works/indicators-of-diabetes"
+            link: "/works/indicators-of-diabetes"
         }
     ];
 
@@ -63,17 +63,26 @@ export default function NavBar() {
             </div>
             <div className="flex justify-center sm:gap-8 items-center font-bold text-2xl text-night">
                 <a href="/" className="hover:text-ash-gray dark:hover:text-indigo-400 transition duration-300 ease-in-out transform hover:-translate-y-1">home</a>
-                <a href="/about" className="hover:text-ash-graydark:hover:text-indigo-400 transition duration-300 ease-in-out transform hover:-translate-y-1">about</a>
-                <div className="hover:text-ash-gray dark:hover:text-indigo-400 transition duration-300 ease-in-out transform hover:-translate-y-1">
+                <a href="/about" className="hover:text-ash-gray dark:hover:text-indigo-400 transition duration-300 ease-in-out transform hover:-translate-y-1">about</a>
+                <div 
+                    className="hover:text-ash-gray dark:hover:text-indigo-400 transition duration-300 ease-in-out transform hover:-translate-y-1"
+                    onMouseEnter={() => setDropdownOpen(true)}
+                    onMouseLeave={() => setDropdownOpen(false)}
+                >
                     <button type="button" id="menu-button" aria-expanded={dropdownOpen} aria-haspopup="true" onClick={toggleDropdown}>
                         works
                         <ExpandMoreRoundedIcon className={`size-8 transition-transform duration-300 ${dropdownOpen ? 'rotate-180' : ''}`} />
                     </button>
                     {dropdownOpen && (
-                        <div className="absolute mt-2 bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600" role="menu" aria-orientation="vertical" aria-labelledby="menu-button">
+                        <div 
+                            className="absolute mt-2 bg-white divide-y divide-gray-100 rounded-lg shadow w-46 h-auto dark:bg-gray-700 dark:divide-gray-600" 
+                            role="menu" 
+                            aria-orientation="vertical" 
+                            aria-labelledby="menu-button"
+                        >
                             <div className="py-2 text-sm text-night">
                                 {worksItems.map((item) => (
-                                    <a key={item.name} href={item.link} className="block px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-600 dark:hover:text-white hover:text-paynes-gray dark:hover:text-indigo-400">
+                                    <a key={item.name} href={item.link} className="block px-3 py-3 hover:bg-gray-50 dark:hover:bg-gray-600 dark:hover:text-white hover:text-ash-gray dark:hover:text-indigo-400 whitespace-nowrap" tabIndex={0}>
                                         {item.name}
                                     </a>
                                 ))}

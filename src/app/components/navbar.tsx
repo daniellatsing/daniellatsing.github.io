@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Logo from "../logo.svg";
 import ExpandMoreRoundedIcon from "@mui/icons-material/ExpandMoreRounded";
 import { FloatingNav } from "./ui/floating-navbar";
 
@@ -10,6 +9,14 @@ export default function NavBar() {
 
     const toggleDropdown = () => {
         setDropdownOpen(!dropdownOpen);
+    };
+
+    const handleScrollToWorks = (e: { preventDefault: () => void; }) => {
+        e.preventDefault();
+        const section = document.getElementById('works');
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
     };
 
     const navItems = [
@@ -23,7 +30,8 @@ export default function NavBar() {
         },
         {
             name: "works",
-            link: "/works"
+            link: "#works",
+            onClick: handleScrollToWorks
         }
     ];
 
@@ -58,7 +66,7 @@ export default function NavBar() {
         <nav className="w-full font-satoshi text-2xl container mx-auto font-general-regular flex place-content-end items-center mt-14 mb-12 sm:mb-28">
             <div className="absolute left-16 h-20 w-20">
                 <a href="/">
-                    <Image src={Logo} alt="Logo" layout="fill" objectFit="contain" />
+                    <Image src="/logo.svg" alt="Logo" fill style={{ objectFit: "contain" }} />
                 </a>
             </div>
             <div className="flex justify-center sm:gap-8 items-center font-bold text-2xl text-night">
@@ -94,7 +102,7 @@ export default function NavBar() {
                     <a href="https://drive.google.com/file/d/1LTKQe8D7K2CPIuEN9msG08PbAZuoispc/view?usp=sharing" className="hover:text-ash-gray dark:hover:text-indigo-400 place-self-center">resume</a>
                 </button>
             </div>
-            <FloatingNav navItems={navItems}/>
+            <FloatingNav navItems={navItems} />
         </nav>
     );
 }

@@ -36,7 +36,7 @@ export default function Footer() {
                         href={link.url}
                         target="__blank"
                         key={link.id}
-                        className="flex items-center justify-center text-night hover:text-indigo-500 dark:hover:text-indigo-400 cursor-pointer rounded-lg dark:bg-ternary-dark hover:text-indigo-500 dark:hover:text-indigo-400 dark:hover:bg-ternary-light shadow-sm hover:shadow-md px-4 transition duration-300 ease-in-out transform hover:shadow-xl size-14 border border-davys-gray"
+                        className="flex items-center justify-center text-night hover:text-ash-gray dark:hover:text-indigo-400 cursor-pointer rounded-lg dark:bg-ternary-dark dark:hover:bg-ternary-light shadow-sm hover:shadow-md px-4 transition duration-300 ease-in-out transform hover:shadow-xl size-14 border border-davys-gray"
                     >
                         <i>{link.icon}</i>
                     </a>

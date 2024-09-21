@@ -2,13 +2,6 @@ import { TypewriterEffect } from '@/app/components/ui/typewriter-effect';
 import { BentoGrid, BentoGridItem } from '@/app/components/ui/bento-grid';
 import Image, { StaticImageData } from "next/image";
 
-import CarmaxImage from "../app/components/project-thumbnails/carmax.png";
-import HHCImage from "../app/components/project-thumbnails/hhc.png";
-import GTImage from "../app/components/project-thumbnails/garden-time.png";
-import MSAImage from "../app/components/project-thumbnails/msa-laptop-mobile.png";
-import DearMImage from "../app/components/project-thumbnails/dearm.png";
-import ShinyImage from "../app/components/project-thumbnails/shinyapp.png";
-
 export default function Home() {
     const words = [
         {
@@ -29,11 +22,13 @@ export default function Home() {
         }
     ]
 
-    const projectNames = (image: StaticImageData, altText: string) => {
+    const projectNames = (image: string, altText: string) => {
         return (
             <Image 
                 src={image} 
                 alt={altText} 
+                width={500}
+                height={300}
                 className="w-max place-self-center my-14" 
             />
         );
@@ -44,42 +39,42 @@ export default function Home() {
             title: "HerHeartCo Mobile Application",
             date: "2024",
             description: "Mobile & Design",
-            header: projectNames(HHCImage, "HerHeartCo Prototype"),
+            header: projectNames("/project-thumbnails/hhc.png", "HerHeartCo Prototype"),
             link: "/works/herheartco"
         },
         {
             title: "Garden Time",
             date: "2024",
             description: "Web",
-            header: projectNames(GTImage, "Garden Time Prototype"),
+            header: projectNames("/project-thumbnails/garden-time.png", "Garden Time Prototype"),
             link: "/works/garden-time"
         },
         {
             title: "Muslim Student Association",
             date: "2023",
             description: "Web",
-            header: projectNames(MSAImage, "Muslim Student Association (MSA) Prototype"),
+            header: projectNames("/project-thumbnails/msa-laptop-mobile.png", "Muslim Student Association (MSA) Prototype"),
             link: "/works/msa"
         },
         {
             title: "Case Study: Carmax",
             date: "2023",
             description: "Design",
-            header: projectNames(CarmaxImage, "Carmax Prototype"),
+            header: projectNames("/project-thumbnails/carmax.png", "Carmax Prototype"),
             link: "/works/carmax"
         },
         {
             title: "Dear.M Journal",
             date: "2023",
             description: "Web",
-            header: projectNames(DearMImage, "DearM Prototype"),
+            header: projectNames("/project-thumbnails/dearm.png", "DearM Prototype"),
             link: "/works/dear-m-journal"
         },
         {
             title: "Indicators of Diabetes",
             date: "2022",
             description: "Shiny App & Data Analysis",
-            header: projectNames(ShinyImage, "Shiny App Image"),
+            header: projectNames("/project-thumbnails/shinyapp.png", "Shiny App Image"),
             link: "/works/indicators-of-diabetes"
         }
     ]

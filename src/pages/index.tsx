@@ -1,6 +1,6 @@
 import { TypewriterEffect } from '@/app/components/ui/typewriter-effect';
 import { BentoGrid, BentoGridItem } from '@/app/components/ui/bento-grid';
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 
 export default function Home() {
     const words = [
@@ -29,7 +29,8 @@ export default function Home() {
                 alt={altText} 
                 width={500}
                 height={300}
-                className="w-max place-self-center my-14" 
+                className="w-max place-self-center my-14"
+                priority={false}
             />
         );
     }
@@ -70,14 +71,22 @@ export default function Home() {
             header: projectNames("/project-thumbnails/dearm.png", "DearM Prototype"),
             link: "/works/dear-m-journal"
         },
-        {
-            title: "Indicators of Diabetes",
-            date: "2022",
-            description: "Shiny App & Data Analysis",
-            header: projectNames("/project-thumbnails/shinyapp.png", "Shiny App Image"),
-            link: "/works/indicators-of-diabetes"
-        }
+        // {
+        //     title: "Indicators of Diabetes",
+        //     date: "2022",
+        //     description: "Shiny App & Data Analysis",
+        //     header: projectNames("/project-thumbnails/shinyapp.png", "Shiny App Image"),
+        //     link: "/works/indicators-of-diabetes"
+        // }
     ]
+
+    const home_blurb = (
+        <p className="font-bold text-2xl text-davys-grey pb-6">
+            I am a Seattle-based software developer with a passion 
+            for designing intuitive and accessible solutions through 
+            the implementation of code and human-centered design.
+        </p>
+    )
     
     return ( 
         <main id="home" className="flex min-h-screen flex-col place-items-center py-24 font-satoshi">
@@ -85,16 +94,16 @@ export default function Home() {
                 <TypewriterEffect words={words} />
             </div>
             <div className="z-10 w-full max-w-7xl text-sm lg:flex">
-                <p className="font-bold text-2xl text-davys-grey pb-6">I am a Seattle-based software developer with a passion for designing intuitive and accessible solutions through the implementation of code and human-centered design.</p>
+                {[home_blurb]}
             </div>
             <div className="w-full border border-french-gray dark:border-secondary-dark mt-16 mb-32" />
             <div id="works" className="z-10 w-full max-w-7xl lg:flex">
                 <p className="text-5xl text-reseda-green font-bold pb-16">works</p>
             </div>
                 <BentoGrid className="projects">
-                    {works.map((card, index) => (
+                    {works.map((card, i) => (
                         <BentoGridItem 
-                            key={index}
+                            key={i}
                             header={card.header}
                             title={card.title}
                             date={card.date}
@@ -103,7 +112,6 @@ export default function Home() {
                         />
                     ))}
                 </BentoGrid>
-            <div className="w-full border border-french-gray dark:border-secondary-dark mt-28 mb-12" />
         </main>
   );
 }

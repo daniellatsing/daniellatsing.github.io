@@ -63,12 +63,17 @@ export default function NavBar() {
     ];
 
     return (
-        <nav className="w-full font-satoshi text-2xl container mx-auto font-general-regular flex place-content-end items-center mt-14 mb-12 sm:mb-28">
-            <div className="absolute left-16 h-20 w-20">
-                <a href="/">
-                    <Image src="/logo.svg" alt="Logo" fill style={{ objectFit: "contain" }} />
-                </a>
-            </div>
+        <nav className="relative w-full font-satoshi text-2xl container mx-auto font-general-regular flex place-content-end items-center mt-14 mb-12 sm:mb-28">
+            <a href="/" className="absolute left-1">
+                <Image 
+                    src="/logo.svg" 
+                    alt="Logo" 
+                    height={50}
+                    width={50}
+                    style={{ objectFit: "contain", width: "auto" }} 
+                    priority={true} 
+                />
+            </a>
             <div className="flex justify-center sm:gap-8 items-center font-bold text-2xl text-night">
                 <a href="/" className="hover:text-ash-gray dark:hover:text-indigo-400 transition duration-300 ease-in-out transform hover:-translate-y-1">home</a>
                 <a href="/about" className="hover:text-ash-gray dark:hover:text-indigo-400 transition duration-300 ease-in-out transform hover:-translate-y-1">about</a>

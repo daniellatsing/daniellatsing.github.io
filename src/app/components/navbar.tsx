@@ -1,6 +1,6 @@
 import Image from "next/image";
 import ExpandMoreRoundedIcon from "@mui/icons-material/ExpandMoreRounded";
-import { FloatingNav } from "./ui/floating-navbar";
+import { FloatingNav } from "./floating-navbar";
 
 import React, { useState } from 'react';
 

@@ -1,5 +1,5 @@
-import { TypewriterEffect } from '@/app/components/ui/typewriter-effect';
-import { BentoGrid, BentoGridItem } from '@/app/components/ui/bento-grid';
+import { TypewriterEffect } from '@/app/components/typewriter-effect';
+import { BentoGrid, BentoGridItem } from '@/app/components/bento-grid';
 import Image from "next/image";
 
 export default function Home() {

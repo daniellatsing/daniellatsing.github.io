@@ -23,7 +23,7 @@ const socialLinks = [
 export default function Footer() {
     return (
         <div className="w-full font-satoshi">
-            <div className="w-full border border-french-gray dark:border-secondary-dark mt-28 mb-28" />
+            <div className="w-full border border-french-gray dark:border-secondary-dark mt-20 mb-28" />
             <p className="text-center text-night font-bold text-4xl py-4 mb-36">Thank you for visiting :^)</p>
             {/* Footer social links */}
             <div className="container mx-auto font-general-regular flex place-content-between mb-12 sm:mb-28">

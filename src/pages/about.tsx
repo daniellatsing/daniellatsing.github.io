@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from "next/image";
 import JobList from '@/app/components/jobList.js';
+import Experience from "@/app/components/experience";
 
 export default function About() {
     const bio_blurb = (
@@ -34,9 +35,9 @@ export default function About() {
 
     return(
         <div id="about" className="flex min-h-screen flex-col place-items-center py-24 font-satoshi">
-            <div className="z-10 w-full max-w-7xl text-sm lg:flex flex-col mb-24">
+            <div className="z-10 w-full max-w-6xl text-sm lg:flex flex-col mb-24 px-20">
                 <p className="text-5xl text-reseda-green font-bold font-satoshi pb-10 whitespace-nowrap">about me</p>
-                <div className="flex flex-row px-20">
+                <div className="flex flex-row">
                     <div className="flex-col max-w-lg">
                         {[bio_blurb]}
                         <p className="text-xl text-night mt-11">Here are some technologies I have been working with:</p>
@@ -52,7 +53,7 @@ export default function About() {
                         </ul>
                         {[hobbies]}
                     </div>
-                    <div className="justify-center pl-48 place-self-center">
+                    <div className="justify-center pl-20 place-self-center">
                         <Image
                             src="/snoopy-reading-yotsuba.jpg"
                             alt="Snoopy reading yotsuba"
@@ -65,9 +66,9 @@ export default function About() {
                 </div>
             </div>
             <div className="w-full border border-french-gray dark:border-secondary-dark mt-16 mb-32" />
-            <div className="z-10 w-full max-w-7xl text-sm lg:flex flex-col">
-                <p className="text-5xl text-reseda-green font-bold font-satoshi pb-10 mt-2 whitespace-nowrap"><i>What</i> have I done?</p>
-                {/* <JobList /> */}
+            <div className="z-10 w-full max-w-5xl text-sm lg:flex flex-col">
+                <p className="text-5xl text-reseda-green font-bold font-satoshi pb-4 mt-2 whitespace-nowrap place-self-end"><i>what</i> have I done?</p>
+                <Experience />
             </div>
         </div>
     )

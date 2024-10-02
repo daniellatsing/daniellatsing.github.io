@@ -37,7 +37,7 @@ export default function Home() {
 
     const works = [
         {
-            title: "HerHeartCo Mobile Application",
+            title: "HerHeartCo",
             date: "2024",
             description: "Mobile & Design",
             header: projectNames("/project-thumbnails/hhc.png", "HerHeartCo Prototype"),
@@ -58,11 +58,11 @@ export default function Home() {
             link: "/works/msa"
         },
         {
-            title: "Case Study: Carmax",
+            title: "MotorVerse",
             date: "2023",
             description: "Design",
             header: projectNames("/project-thumbnails/carmax.png", "Carmax Prototype"),
-            link: "/works/carmax"
+            link: "/works/motorverse"
         },
         {
             title: "Dear.M Journal",

@@ -1,6 +1,7 @@
 "use client";
 
 import { cn } from "../../../utils/cn";
+import Link from "next/link";
 
 export const BentoGrid = ({
   className,
@@ -43,7 +44,7 @@ export const BentoGridItem = ({
             className
         )}
     >
-        <a href={link} rel="noopener noreferrer">
+        <Link href={link ?? "#"} rel="noopener noreferrer">
             <div className="rounded-md hover:shadow-md hover:-translate-y-1 transition duration-200 shadow-input dark:shadow-none p-2 dark:bg-black dark:border-white/[0.2] bg-white-two border border-french-gray flex flex-col">
                 {header}
             </div>
@@ -60,7 +61,7 @@ export const BentoGridItem = ({
                     {description}
                 </div>
             </div>
-        </a>
+        </Link>
     </div>
   );
 };

@@ -63,7 +63,7 @@ export default function NavBar() {
     ];
 
     return (
-        <nav className="relative w-full font-satoshi text-2xl container mx-auto font-general-regular flex place-content-end items-center mt-14 mb-12 sm:mb-28">
+        <nav className="relative w-full font-satoshi text-2xl container mx-auto font-general-regular flex place-content-end items-center mt-14 mb-16">
             <a href="/" className="absolute left-1">
                 <Image 
                     src="/logo.svg" 
@@ -95,7 +95,7 @@ export default function NavBar() {
                         >
                             <div className="py-2 text-sm text-night">
                                 {worksItems.map((item) => (
-                                    <a key={item.name} href={item.link} className="block px-3 py-3 hover:bg-gray-50 dark:hover:bg-gray-600 dark:hover:text-white hover:text-ash-gray dark:hover:text-indigo-400 whitespace-nowrap" tabIndex={0}>
+                                    <a key={item.name} href={item.link} className="block px- py-3 hover:bg-gray-50 dark:hover:bg-gray-600 dark:hover:text-white hover:text-ash-gray dark:hover:text-indigo-400 whitespace-nowrap" tabIndex={0}>
                                         {item.name}
                                     </a>
                                 ))}

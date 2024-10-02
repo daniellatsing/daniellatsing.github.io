@@ -1,6 +1,5 @@
 import React from 'react';
 import Image from "next/image";
-import JobList from '@/app/components/jobList.js';
 import Experience from "@/app/components/experience";
 
 export default function About() {

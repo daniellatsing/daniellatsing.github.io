@@ -25,7 +25,7 @@ export default function GardenTime() {
                     </div>
                 </div>
                 <div className="border max-w-7xl w-full my-12 border-night"></div>
-                <div className="text-lg grid grid-rows-1 grid-cols-[repeat(5,1fr)] gap-x-8 justify-items-center max-w-7xl mx-auto px-8">
+                <div className="text-lg grid grid-rows-1 grid-cols-[repeat(6,1fr)] gap-x-8 justify-items-center max-w-7xl mx-auto px-8">
                     <div>
                         <p className="text-davys-grey">Role</p>
                         <p className="text-night">Full Stack Engineer</p>
@@ -54,6 +54,11 @@ export default function GardenTime() {
                         <p className="text-night">VSCode</p>
                         <p className="text-night">Microsoft Azure</p>
                         <p className="text-night">MongoDB</p>
+                    </div>
+                    <div>
+                        <button className="bg-white divide-y divide-gray-100 w-46 h-auto dark:bg-gray-700 dark:divide-gray-600 px-4 py-2 rounded-full shadow-sm transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-md">
+                            <a href="https://github.com/info441-wi24/garden-time" className="text-night">View Project</a>
+                        </button>
                     </div>
                 </div>
             </div>

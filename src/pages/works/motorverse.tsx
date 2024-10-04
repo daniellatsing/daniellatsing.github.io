@@ -22,7 +22,7 @@ export default function MotorVerse() {
                     </div>
                 </div>
                 <div className="border max-w-7xl w-full my-12 border-french-gray"></div>
-                <div className="text-lg grid grid-rows-1 grid-cols-[repeat(5,1fr)] gap-x-8 justify-items-center max-w-7xl mx-auto px-8">
+                <div className="text-lg grid grid-rows-1 grid-cols-[repeat(6,1fr)] gap-x-8 justify-items-center max-w-7xl mx-auto px-8">
                     <div>
                         <p className="text-davys-grey">Role</p>
                         <p className="text-night">UX Researcher/Designer</p>
@@ -49,6 +49,11 @@ export default function MotorVerse() {
                         <p className="text-davys-grey">Tools</p>
                         <p className="text-night">Figma</p>
                         <p className="text-night">FigJam</p>
+                    </div>
+                    <div>
+                        <button className="bg-white divide-y divide-gray-100 w-46 h-auto dark:bg-gray-700 dark:divide-gray-600 px-4 py-2 rounded-full shadow-sm transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-md">
+                            <a href="https://www.figma.com/proto/83jCeGmfTIBlDIhOjcGOEz/Final-Project%3A-MOTORVERSE-Wireframe?page-id=0%3A1&node-id=55-299&starting-point-node-id=1%3A10&t=VwlBSrdC0TSWglJk-1" className="text-night">View Project</a>
+                        </button>
                     </div>
                 </div>
             </div>

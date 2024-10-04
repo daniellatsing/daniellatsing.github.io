@@ -49,17 +49,17 @@ export default function NavBar() {
             link: "/works/msa" 
         },
         { 
-            name: "Carmax", 
-            link: "/works/carmax" 
+            name: "MotorVerse", 
+            link: "/works/motorverse" 
         },
         { 
-            name: "Dear.m Journal", 
+            name: "Dear.M Journal", 
             link: "/works/dear-m-journal" 
         },
-        {
-            name: "Indicators of Diabetes",
-            link: "/works/indicators-of-diabetes"
-        }
+        // {
+        //     name: "Indicators of Diabetes",
+        //     link: "/works/indicators-of-diabetes"
+        // }
     ];
 
     return (
@@ -88,14 +88,14 @@ export default function NavBar() {
                     </button>
                     {dropdownOpen && (
                         <div 
-                            className="absolute mt-2 bg-white divide-y divide-gray-100 rounded-lg shadow w-46 h-auto dark:bg-gray-700 dark:divide-gray-600" 
+                            className="absolute bg-white divide-y divide-gray-100 rounded-lg shadow w-46 h-auto dark:bg-gray-700 dark:divide-gray-600 px-2" 
                             role="menu" 
                             aria-orientation="vertical" 
                             aria-labelledby="menu-button"
                         >
                             <div className="py-2 text-sm text-night">
                                 {worksItems.map((item) => (
-                                    <a key={item.name} href={item.link} className="block px- py-3 hover:bg-gray-50 dark:hover:bg-gray-600 dark:hover:text-white hover:text-ash-gray dark:hover:text-indigo-400 whitespace-nowrap" tabIndex={0}>
+                                    <a key={item.name} href={item.link} className="block px-2 py-3 hover:bg-gray-50 dark:hover:bg-gray-600 dark:hover:text-white hover:text-ash-gray dark:hover:text-indigo-400 whitespace-nowrap" tabIndex={0}>
                                         {item.name}
                                     </a>
                                 ))}

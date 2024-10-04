@@ -22,7 +22,7 @@ export default function DearMJournal() {
                     </div>
                 </div>
                 <div className="border max-w-7xl w-full my-12 border-night"></div>
-                <div className="text-lg grid grid-rows-1 grid-cols-[repeat(5,1fr)] gap-x-8 justify-items-center max-w-7xl mx-auto px-8">
+                <div className="text-lg grid grid-rows-1 grid-cols-[repeat(6,1fr)] gap-x-8 justify-items-center max-w-7xl mx-auto px-8">
                     <div>
                         <p className="text-davys-grey">Role</p>
                         <p className="text-night">Front End Engineer</p>
@@ -45,6 +45,11 @@ export default function DearMJournal() {
                         <p className="text-davys-grey">Tools</p>
                         <p className="text-night">VSCode</p>
                         <p className="text-night">Figma</p>
+                    </div>
+                    <div>
+                        <button className="bg-night divide-y divide-gray-100 w-46 h-auto dark:bg-gray-700 dark:divide-gray-600 px-4 py-2 rounded-full shadow-sm transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-md">
+                            <a href="https://dearm-journal-a829a.web.app/" className="text-white">View Project</a>
+                        </button>
                     </div>
                 </div>
             </div>

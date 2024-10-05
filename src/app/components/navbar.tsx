@@ -1,6 +1,7 @@
 import Image from "next/image";
 import ExpandMoreRoundedIcon from "@mui/icons-material/ExpandMoreRounded";
 import { FloatingNav } from "./floating-navbar";
+import Link from "next/link";
 
 import React, { useState } from 'react';
 
@@ -64,7 +65,7 @@ export default function NavBar() {
 
     return (
         <nav className="relative w-full font-satoshi text-2xl container mx-auto flex place-content-end items-center mt-14 mb-16">
-            <a href="/" className="absolute left-0">
+            <Link href="/" className="absolute left-0">
                 <Image 
                     src="/logo.svg" 
                     alt="Logo" 
@@ -73,10 +74,10 @@ export default function NavBar() {
                     style={{ objectFit: "contain", width: "auto" }} 
                     priority={true} 
                 />
-            </a>
+            </Link>
             <div className="flex justify-center sm:gap-8 items-center font-bold text-2xl text-night">
-                <a href="/" className="hover:text-ash-gray dark:hover:text-indigo-400 transition duration-300 ease-in-out transform hover:-translate-y-1">home</a>
-                <a href="/about" className="hover:text-ash-gray dark:hover:text-indigo-400 transition duration-300 ease-in-out transform hover:-translate-y-1">about</a>
+                <Link href="/" className="hover:text-ash-gray dark:hover:text-indigo-400 transition duration-300 ease-in-out transform hover:-translate-y-1">home</Link>
+                <Link href="/about" className="hover:text-ash-gray dark:hover:text-indigo-400 transition duration-300 ease-in-out transform hover:-translate-y-1">about</Link>
                 <div 
                     className="hover:text-ash-gray dark:hover:text-indigo-400 transition duration-300 ease-in-out transform hover:-translate-y-1"
                     onMouseEnter={() => setDropdownOpen(true)}
@@ -104,7 +105,7 @@ export default function NavBar() {
                     )}
                 </div>
                 <button className="border border-davys-gray py-2 px-4 rounded-full shadow-sm transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-md">
-                    <a href="https://drive.google.com/file/d/1LTKQe8D7K2CPIuEN9msG08PbAZuoispc/view?usp=sharing" className="hover:text-ash-gray dark:hover:text-indigo-400 place-self-center">resume</a>
+                    <Link href="https://drive.google.com/file/d/1LTKQe8D7K2CPIuEN9msG08PbAZuoispc/view?usp=sharing" className="hover:text-ash-gray dark:hover:text-indigo-400 place-self-center">resume</Link>
                 </button>
             </div>
             <FloatingNav navItems={navItems} />

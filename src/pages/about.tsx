@@ -43,7 +43,7 @@ export default function About() {
                         <ul className="text-lg text-night mt-11 grid grid-cols-2 gap-4">
                             {tech_stack.map(function (tech_item, i) {
                                 return (
-                                    <li className="text-night">
+                                    <li key={i} className="text-night">
                                         <span className="text-paynes-gray px-2">▹ </span>
                                         {tech_item}
                                     </li>

@@ -1,5 +1,5 @@
-import { TypewriterEffect } from '@/app/components/ui/typewriter-effect';
-import { BentoGrid, BentoGridItem } from '@/app/components/ui/bento-grid';
+import { TypewriterEffect } from '@/app/components/typewriter-effect';
+import { BentoGrid, BentoGridItem } from '@/app/components/bento-grid';
 import Image from "next/image";
 
 export default function Home() {
@@ -27,8 +27,8 @@ export default function Home() {
             <Image 
                 src={image} 
                 alt={altText} 
-                width={500}
-                height={300}
+                width={350}
+                height={100}
                 className="w-max place-self-center my-14"
                 priority={false}
             />
@@ -37,7 +37,7 @@ export default function Home() {
 
     const works = [
         {
-            title: "HerHeartCo Mobile Application",
+            title: "HerHeartCo",
             date: "2024",
             description: "Mobile & Design",
             header: projectNames("/project-thumbnails/hhc.png", "HerHeartCo Prototype"),
@@ -58,11 +58,11 @@ export default function Home() {
             link: "/works/msa"
         },
         {
-            title: "Case Study: Carmax",
+            title: "MotorVerse",
             date: "2023",
             description: "Design",
             header: projectNames("/project-thumbnails/carmax.png", "Carmax Prototype"),
-            link: "/works/carmax"
+            link: "/works/motorverse"
         },
         {
             title: "Dear.M Journal",
@@ -89,15 +89,15 @@ export default function Home() {
     )
     
     return ( 
-        <main id="home" className="flex min-h-screen flex-col place-items-center py-24 font-satoshi">
-            <div className="z-10 w-full max-w-7xl text-sm lg:flex">
+        <main id="home" className="flex min-h-screen flex-col place-items-center py-20 font-satoshi">
+            <div className="z-10 w-full max-w-6xl text-sm lg:flex">
                 <TypewriterEffect words={words} />
             </div>
-            <div className="z-10 w-full max-w-7xl text-sm lg:flex">
+            <div className="z-10 w-full max-w-6xl text-sm lg:flex">
                 {[home_blurb]}
             </div>
             <div className="w-full border border-french-gray dark:border-secondary-dark mt-16 mb-32" />
-            <div id="works" className="z-10 w-full max-w-7xl lg:flex">
+            <div id="works" className="z-10 w-full max-w-6xl lg:flex">
                 <p className="text-5xl text-reseda-green font-bold pb-16">works</p>
             </div>
                 <BentoGrid className="projects">

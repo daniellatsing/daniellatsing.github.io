@@ -30,7 +30,7 @@ module.exports = {
         'paynes-gray': '#576978',
         'night': '#0b100d',
         'davys-grey': '#4e4e4e',
-        'ash-gray': '#a4d4d4'
+        'ash-gray': '#a4d4d4',
       },
     },
   },

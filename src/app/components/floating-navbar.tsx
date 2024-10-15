@@ -12,13 +12,16 @@ import Link from "next/link";
 export const FloatingNav = ({
   navItems,
   className,
+  onWorksClick,
 }: {
   navItems: {
     name: string;
     link: string;
     icon?: JSX.Element;
+    onClick?: () => void;
   }[];
   className?: string;
+  onWorksClick?: () => void; 
 }) => {
   const { scrollYProgress } = useScroll();
 
@@ -67,6 +70,7 @@ export const FloatingNav = ({
             className={cn(
               "relative dark:text-neutral-50 items-center flex space-x-1 text-neutral-600 dark:hover:text-neutral-300 hover:text-ash-gray"
             )}
+            onClick={navItem.name === "works" ? onWorksClick : undefined}
           >
             <span className="block sm:hidden">{navItem.icon}</span>
             <span className="hidden sm:block text-sm">{navItem.name}</span>

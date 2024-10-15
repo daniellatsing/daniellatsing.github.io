@@ -5,18 +5,20 @@ export default function GardenTime() {
 
     return (
         <div className="flex flex-col font-satoshi font-bold mx-auto">
-            <div className="bg-gradient-to-b from-[#c7dac8] to-white self-center flex-grow flex flex-col items-center py-20">
+            <div className="bg-gradient-to-b from-[#c7dac8] to-white flex-grow flex flex-col items-center py-20">
                 <div className="flex flex-row justify-evenly items-center w-screen px-40 mx-auto">
                     <div>
-                        <p className="text-night text-6xl pb-1">Garden Time</p>
-                        <p className="text-night text-4xl">Pomodoro and To-do List Web Application</p>
+                        <p className="text-night pb-1 md:text-4xl lg:text-6xl">Garden Time</p>
+                        <p className="text-night md:text-2xl lg:text-4xl">Pomodoro and To-do List Web Application</p>
                     </div>
-                    <div>
+                    <div className="flex justify-center items-center w-full md:w-auto">
                         <Image
                             src="/project-thumbnails/garden-time-logo.png"
-                            alt="Garden Time Logo Icon created by Pixelmeetup - Flaticon"
-                            width={175}
-                            height={175}
+                            alt="Garden Time Logo"
+                            sizes="(min-width:320px) 50vw, (min-width:768px) 50vw, (min-width:1024px) 30vw"
+                            width={0}
+                            height={0}
+                            style={{ width: '70%', height: 'auto' }}
                             priority={false}
                         />
                         <p className="sr-only">
@@ -25,7 +27,7 @@ export default function GardenTime() {
                     </div>
                 </div>
                 <div className="border max-w-7xl w-full my-12 border-night"></div>
-                <div className="text-lg grid grid-rows-1 grid-cols-[repeat(6,1fr)] gap-x-8 justify-items-center max-w-7xl mx-auto px-8">
+                <div className="text-md grid grid-rows-1 justify-items-center max-w-7xl mx-auto px-8 text-center md:grid-cols-3 md:gap-y-8 lg:grid-cols-[repeat(5,1fr)] lg:gap-x-8 lg:text-lg lg:text-left">
                     <div>
                         <p className="text-davys-grey">Role</p>
                         <p className="text-night">Full Stack Engineer</p>
@@ -63,7 +65,7 @@ export default function GardenTime() {
                 </div>
             </div>
             <div className="self-center max-w-4xl mt-20 mb-8">
-                <p className="text-davys-grey text-4xl">
+                <p className="text-davys-grey text-2xl text-center md:px-20 lg:text-4xl lg:text-left">
                     <i>sorry! this page is still under construction...</i>
                 </p>
             </div>

@@ -81,7 +81,7 @@ export default function Home() {
     ]
 
     const home_blurb = (
-        <p className="font-bold text-2xl text-davys-grey pb-6">
+        <p className="font-bold text-davys-grey pb-6 md:text-xl md:text-center md:px-20 lg:text-left lg:px-0 lg:text-2xl">
             I am a Seattle-based software developer with a passion 
             for designing intuitive and accessible solutions through 
             the implementation of code and human-centered design.
@@ -89,16 +89,16 @@ export default function Home() {
     )
     
     return ( 
-        <main id="home" className="flex min-h-screen flex-col place-items-center py-20 font-satoshi">
+        <main id="home" className="flex min-h-screen flex-col place-items-center font-satoshi md:py-8 lg:py-20">
             <div className="z-10 w-full max-w-6xl text-sm lg:flex">
                 <TypewriterEffect words={words} />
             </div>
             <div className="z-10 w-full max-w-6xl text-sm lg:flex">
                 {[home_blurb]}
             </div>
-            <div className="w-full border border-french-gray dark:border-secondary-dark mt-16 mb-32" />
+            <div className="w-full border border-french-gray dark:border-secondary-dark mt-16 md:mb-20" />
             <div id="works" className="z-10 w-full max-w-6xl lg:flex">
-                <p className="text-5xl text-reseda-green font-bold pb-16">works</p>
+                <p className="text-5xl text-reseda-green font-bold pb-16 md:text-center lg:text-left">works</p>
             </div>
                 <BentoGrid className="projects">
                     {works.map((card, i) => (

@@ -4,7 +4,7 @@ import Experience from "@/app/components/experience";
 
 export default function About() {
     const bio_blurb = (
-        <p className="text-xl text-night mt-4">
+        <p className="text-xl text-night mt-4 md:text-center md:justify-items-center lg:text-left">
             I am a graduate of the 
             <a href="https://www.washington.edu/" className="text-paynes-gray font-bold"> University of Washington</a>,
             majoring in Informatics with a concentration in software development 
@@ -25,7 +25,7 @@ export default function About() {
     ];
 
     const hobbies = (
-        <p className="text-xl text-paynes-gray font-medium mt-11">
+        <p className="text-xl text-paynes-gray font-medium mt-11 md:text-center md:pb-8 lg:pb-0 lg:text-left">
             In my free time, my interests include visiting coffee 
             shops and cafes, playing video games, and watching the 
             latest K-dramas and variety shows!
@@ -33,13 +33,13 @@ export default function About() {
     );
 
     return(
-        <div id="about" className="flex min-h-screen flex-col place-items-center py-24 font-satoshi">
-            <div className="z-10 w-full max-w-6xl text-sm lg:flex flex-col mb-24 px-20">
-                <p className="text-5xl text-reseda-green font-bold font-satoshi pb-10 whitespace-nowrap">about me</p>
-                <div className="flex flex-row">
+        <div id="about" className="flex min-h-screen flex-col place-items-center font-satoshi md:py-20 lg:py-24">
+            <div className="z-10 w-full max-w-6xl text-sm lg:flex flex-col px-20 md:mb-12 lg:mb-24">
+                <h3 className="text-5xl text-reseda-green font-bold font-satoshi pb-10 whitespace-nowrap md:text-5xl md:text-center lg:text-left">about me</h3>
+                <div className="flex lg:flex-row md:flex-col md:place-items-center">
                     <div className="flex-col max-w-lg">
                         {[bio_blurb]}
-                        <p className="text-xl text-night mt-11">Here are some technologies I have been working with:</p>
+                        <p className="text-xl text-night mt-11 md:text-center lg:text-left">Here are some technologies I have been working with:</p>
                         <ul className="text-lg text-night mt-11 grid grid-cols-2 gap-4">
                             {tech_stack.map(function (tech_item, i) {
                                 return (
@@ -52,7 +52,7 @@ export default function About() {
                         </ul>
                         {[hobbies]}
                     </div>
-                    <div className="justify-center pl-20 place-self-center">
+                    <div className="justify-center place-self-center lg:pl-20">
                         <Image
                             src="/snoopy-reading-yotsuba.jpg"
                             alt="Snoopy reading yotsuba"
@@ -64,9 +64,9 @@ export default function About() {
                     </div>
                 </div>
             </div>
-            <div className="w-full border border-french-gray dark:border-secondary-dark mt-16 mb-32" />
+            <div className="w-full border border-french-gray dark:border-secondary-dark mt-16 md:mb-20" />
             <div className="z-10 w-full max-w-5xl text-sm lg:flex flex-col">
-                <p className="text-5xl text-reseda-green font-bold font-satoshi pb-4 mt-2 whitespace-nowrap place-self-end"><i>what</i> have I done?</p>
+                <p className="text-5xl text-reseda-green font-bold font-satoshi pb-4 mt-2 whitespace-nowrap md:text-center lg:place-self-end"><i>what</i> have I done?</p>
                 <Experience />
             </div>
         </div>

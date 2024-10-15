@@ -25,7 +25,7 @@ export default function Footer() {
     return (
         <div className="w-full font-satoshi">
             <div className="w-full border border-french-gray dark:border-secondary-dark mt-20 mb-28 md:mt-10 md:mb-16" />
-            <p className="text-center text-night font-bold text-4xl py-4 mb-36 md:text-2xl md:mb-16">Thank you for visiting :^)</p>
+            <p className="text-center text-night font-bold sm:hidden md:text-2xl md:mb-16 md:hidden lg:block lg:text-4xl lg:py-4 lg:mb-36">Thank you for visiting :^)</p>
             {/* Footer social links */}
             <div className="container mx-auto flex place-content-between mb-12 md:mb-18 sm:mb-20">
                 <div className="align-start font-bold text-night">

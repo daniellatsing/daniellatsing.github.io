@@ -33,7 +33,7 @@ const Experience: React.FC = () => {
   ];
 
   return (
-    <div className="w-full max-w-5xl mx-auto text-night mt-4">
+    <div className="max-w-5xl mx-auto text-night mt-4 md:px-10 lg:w-full">
       <div className="border-b border-french-gray"></div>
       {experienceItems.map((item, index) => (
         <div className="border-b border-french-gray" key={index}>

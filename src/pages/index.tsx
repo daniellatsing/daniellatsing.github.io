@@ -99,19 +99,19 @@ export default function Home() {
             <div className="w-full border border-french-gray dark:border-secondary-dark mt-16 md:mb-20" />
             <div id="works" className="z-10 w-full max-w-6xl lg:flex">
                 <h3 className="text-5xl text-reseda-green font-bold pb-16 md:text-center lg:text-left">works</h3>
+                <BentoGrid className="projects px-10">
+                    {works.map((card, i) => (
+                        <BentoGridItem 
+                            key={i}
+                            header={card.header}
+                            title={card.title}
+                            date={card.date}
+                            description={card.description}
+                            link={card.link}
+                        />
+                    ))}
+                </BentoGrid>    
             </div>
-            <BentoGrid className="projects px-10">
-                {works.map((card, i) => (
-                    <BentoGridItem 
-                        key={i}
-                        header={card.header}
-                        title={card.title}
-                        date={card.date}
-                        description={card.description}
-                        link={card.link}
-                    />
-                ))}
-            </BentoGrid>
         </main>
   );
 }

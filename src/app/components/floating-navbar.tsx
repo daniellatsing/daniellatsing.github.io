@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   motion,
   AnimatePresence,
@@ -8,6 +8,8 @@ import {
 } from "framer-motion";
 import { cn } from "../../../utils/cn";
 import Link from "next/link";
+import { useRouter } from "next/router";
+import { Url } from "next/dist/shared/lib/router/router";
 
 export const FloatingNav = ({
   navItems,
@@ -18,31 +20,29 @@ export const FloatingNav = ({
     name: string;
     link: string;
     icon?: JSX.Element;
-    onClick?: () => void;
   }[];
   className?: string;
   onWorksClick?: () => void; 
 }) => {
   const { scrollYProgress } = useScroll();
-
   const [visible, setVisible] = useState(false);
 
-  useMotionValueEvent(scrollYProgress, "change", (current) => {
-    // Check if current is not undefined and is a number
-    if (typeof current === "number") {
-      let direction = current! - scrollYProgress.getPrevious()!;
+  const router = useRouter();
 
-      if (scrollYProgress.get() < 0.05) {
-        setVisible(false);
-      } else {
-        if (direction < 0) {
-          setVisible(true);
-        } else {
-          setVisible(false);
-        }
-      }
+  useMotionValueEvent(scrollYProgress, "change", (current) => {
+    if (typeof current === "number") {
+      let direction = current - scrollYProgress.getPrevious()!;
+      setVisible(current >= 0.05 && direction < 0);
     }
   });
+
+  const handleLinkClick = (navItem: { name: string; link: Url; }) => {
+    if (navItem.name === "works" && onWorksClick) {
+      onWorksClick();
+    } else {
+      router.push(navItem.link);
+    }
+  };
 
   return (
     <AnimatePresence mode="wait">
@@ -70,7 +70,7 @@ export const FloatingNav = ({
             className={cn(
               "relative dark:text-neutral-50 items-center flex space-x-1 text-neutral-600 dark:hover:text-neutral-300 hover:text-ash-gray"
             )}
-            onClick={navItem.name === "works" ? onWorksClick : undefined}
+            onClick={() => handleLinkClick(navItem)}
           >
             <span className="block sm:hidden">{navItem.icon}</span>
             <span className="hidden sm:block text-sm">{navItem.name}</span>

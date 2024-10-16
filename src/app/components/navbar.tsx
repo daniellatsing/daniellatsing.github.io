@@ -3,55 +3,53 @@ import ExpandMoreRoundedIcon from "@mui/icons-material/ExpandMoreRounded";
 import { FloatingNav } from "./floating-navbar";
 import Link from "next/link";
 import { useRouter } from "next/router";
-
-import React, { useEffect, useState } from 'react';
+import React, { useState, useCallback } from 'react';
 import { useMediaQuery } from "@mui/material";
 
 export default function NavBar() {
     const [dropdownOpen, setDropdownOpen] = useState(false);
-    const [scrollToWorks, setScrollToWorks] = useState(false);
     const router = useRouter();
+    const isMobileOrTablet = useMediaQuery('(max-width: 1024px)');
 
-    const toggleDropdown = () => {
-        setDropdownOpen(!dropdownOpen);
+    type AsyncFunction = (...args: any[]) => Promise<void>;
+
+    const debounce = (func: AsyncFunction, delay: number | undefined) => {
+        let timeoutId: NodeJS.Timeout | undefined;
+        return (...args: any[]) => {
+            if (timeoutId) {
+                clearTimeout(timeoutId);
+            }
+            timeoutId = setTimeout(() => {
+                func(...args);
+            }, delay);
+        };
     };
 
-    useEffect(() => {
-        const handleRouteChangeComplete = () => {
-            if (scrollToWorks) {
-                const section = document.getElementById('works');
-                if (section) {
-                    section.scrollIntoView({ behavior: 'smooth' });
-                }
-                setScrollToWorks(false); // Reset the flag after scrolling
-            }
-        };
+    const toggleDropdown = () => {
+        setDropdownOpen(prev => !prev);
+    };
 
-        router.events.on('routeChangeComplete', handleRouteChangeComplete);
-
-        return () => {
-            router.events.off('routeChangeComplete', handleRouteChangeComplete);
-        };
-    }, [router.events]);
-
-    const handleScrollToWorks = () => {
-        setDropdownOpen(false);
-        if (router.pathname === "/") {
-            const section = document.getElementById('works');
-            if (section) {
-                section.scrollIntoView({ behavior: 'smooth' });
-            }
-        } else {
-            router.push("/").then(() => {
-                const section = document.getElementById('works');
-                if (section) {
-                    section.scrollIntoView({ behavior: 'smooth' });
-                }
-            });
+    const scrollToSection = (sectionId: string) => {
+        const section = document.getElementById(sectionId);
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth' });
         }
     };
 
-    const isMobileOrTablet = useMediaQuery('(max-width: 1024px)');
+    const handleWorksClick = useCallback(debounce(async () => {
+        if (router.isFallback || router.asPath === '/works') return; 
+    
+        try {
+            if (router.pathname === "/") {
+                scrollToSection('works');
+            } else {
+                await router.push("/");
+                scrollToSection('works');
+            }
+        } catch (error) {
+            console.error("Error during navigation:", error);
+        }
+    }, 300), [router]);
 
     const navItems = [
         {
@@ -64,8 +62,7 @@ export default function NavBar() {
         },
         {
             name: "works",
-            link: "/",
-            onClick: handleScrollToWorks
+            link: "#works",
         }
     ];
 
@@ -129,7 +126,12 @@ export default function NavBar() {
                             >
                                 <div className="py-2 text-sm text-night">
                                     {worksItems.map((item) => (
-                                        <Link key={item.name} href={item.link} className="block px-2 py-3 hover:bg-gray-50 dark:hover:bg-gray-600 dark:hover:text-white hover:text-ash-gray dark:hover:text-indigo-400 whitespace-nowrap" tabIndex={0}>
+                                        <Link 
+                                            key={item.name} 
+                                            href={item.link} 
+                                            className="block px-2 py-3 hover:bg-gray-50 dark:hover:bg-gray-600 dark:hover:text-white hover:text-ash-gray dark:hover:text-indigo-400 whitespace-nowrap" 
+                                            tabIndex={0}
+                                        >
                                             {item.name}
                                         </Link>
                                     ))}
@@ -138,22 +140,24 @@ export default function NavBar() {
                         )}
                     </div>
                 ) : (
-                    // <Link href="/" onClick={handleScrollToWorks}>
-                    //     <button className="hover:text-ash-gray dark:hover:text-indigo-400 transition duration-300 ease-in-out transform hover:-translate-y-1">
-                    //         works
-                    //     </button>
-                    // </Link>
-                    <div className="hover:text-ash-gray dark:hover:text-indigo-400 transition duration-300 ease-in-out transform hover:-translate-y-1">
-                    <button type="button" onClick={handleScrollToWorks}>
+                    <button 
+                        type="button" 
+                        className="hover:text-ash-gray dark:hover:text-indigo-400 transition duration-300 ease-in-out transform hover:-translate-y-1"
+                        onClick={handleWorksClick}
+                    >
                         works
                     </button>
-                </div>
                 )}
                 <button className="border border-davys-gray py-2 px-4 rounded-full shadow-sm transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-md">
-                    <Link href="https://drive.google.com/file/d/1LTKQe8D7K2CPIuEN9msG08PbAZuoispc/view?usp=sharing" className="hover:text-ash-gray dark:hover:text-indigo-400 place-self-center">resume</Link>
+                    <Link 
+                        href="https://drive.google.com/file/d/1LTKQe8D7K2CPIuEN9msG08PbAZuoispc/view?usp=sharing" 
+                        className="hover:text-ash-gray dark:hover:text-indigo-400 place-self-center"
+                    >
+                        resume
+                    </Link>
                 </button>
             </div>
-            <FloatingNav navItems={navItems} />
+            <FloatingNav navItems={navItems} onWorksClick={handleWorksClick} />
         </nav>
     );
 }

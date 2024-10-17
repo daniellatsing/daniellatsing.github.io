@@ -1,9 +1,18 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     images: {
-      domains: [
-        "api.microlink.io", // Microlink Image Preview
+      remotePatterns: [
+        {
+          protocol: 'https',
+          hostname: 'res.cloudinary.com',
+          pathname: '**',
+        }
       ],
+      deviceSizes: [
+        320,
+        768,
+        1024
+      ]
     },
   };
   

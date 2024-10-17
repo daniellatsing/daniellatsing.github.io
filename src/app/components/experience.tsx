@@ -33,7 +33,7 @@ const Experience: React.FC = () => {
   ];
 
   return (
-    <div className="w-full max-w-5xl mx-auto text-night mt-4">
+    <div className="max-w-5xl mx-auto text-night mt-4 px-8 md:px-10 lg:w-full">
       <div className="border-b border-french-gray"></div>
       {experienceItems.map((item, index) => (
         <div className="border-b border-french-gray" key={index}>
@@ -42,7 +42,7 @@ const Experience: React.FC = () => {
             onClick={() => toggleAccordion(index)}
           >
             <span className="text-lg text-paynes-gray font-bold">
-              {item.title}<span className="text-lg text-night font-bold">{item.company}</span>
+              {item.title}<span className="text-base md:text-lg text-night font-bold">{item.company}</span>
             </span>
             <ExpandMoreRoundedIcon
               className={`text-french-gray w-6 h-6 transition-transform duration-800 ease-in-out ${
@@ -50,10 +50,10 @@ const Experience: React.FC = () => {
               }`}
             />
           </button>
-          <div className="ml-4 px-4 text-base">
+          <div className="ml-4 px-4">
             <Collapse in={openIndex === index}>
-              <div className="text-davys-grey font-bold pb-1">{item.date}</div>
-              <div className="pb-4 text-night">{item.content}</div>
+              <div className="text-davys-grey font-bold pb-1 text-sm md:text-base">{item.date}</div>
+              <div className="pb-4 text-night text-sm md:text-base">{item.content}</div>
             </Collapse>
           </div>
         </div>

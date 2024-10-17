@@ -6,7 +6,7 @@ export default function MSA() {
     return (
         <div className="flex flex-col font-satoshi font-bold mx-auto">
             <div className="bg-gradient-to-b from-[#ae8db4] to-white flex-grow flex flex-col items-center pt-14 lg:py-20">
-                <div className="flex flex-col items-center md:flex-row md:justify-center w-full max-w-7xl px-8">
+                <div className="flex flex-col items-center w-full max-w-7xl px-8 md:flex-row md:justify-center lg:justify-evenly">
                     <div className="text-center md:text-left mb-6 md:mb-0">
                         <p className="text-white pb-1 text-4xl lg:text-5xl">Muslim Student Association</p>
                         <p className="text-night text-2xl md:text-nowrap lg:text-4xl">MSA Website Redesign</p>
@@ -52,8 +52,8 @@ export default function MSA() {
                         <p className="text-night">Vercel</p>
                     </div>
                     <div className="mt-4 md:mt-0">
-                        <button className="bg-night divide-y divide-gray-100 w-46 h-auto dark:bg-gray-700 dark:divide-gray-600 px-4 py-2 rounded-full shadow-sm transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-md md:bg-white">
-                            <a href="https://github.com/webimpactuw/muslim-student-assoc" className="text-white md:text-night">View Project</a>
+                        <button className="bg-night divide-y divide-gray-100 w-46 h-auto dark:bg-gray-700 dark:divide-gray-600 px-4 py-2 rounded-full shadow-sm transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-md lg:bg-white">
+                            <a href="https://github.com/webimpactuw/muslim-student-assoc" className="text-white lg:text-night">View Project</a>
                         </button>
                     </div>
                 </div>

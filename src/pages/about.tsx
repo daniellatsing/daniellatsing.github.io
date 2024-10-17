@@ -4,7 +4,7 @@ import Experience from "@/app/components/experience";
 
 export default function About() {
     const bio_blurb = (
-        <p className="text-base text-night text-center md:justify-items-center md:text-xl lg:mt-4 lg:text-left">
+        <p className="text-base text-night text-center md:justify-items-center md:text-lg lg:mt-2 lg:text-left">
             I am a graduate of the 
             <a href="https://www.washington.edu/" className="text-paynes-gray font-bold"> University of Washington</a>,
             majoring in Informatics with a concentration in software development 
@@ -52,7 +52,7 @@ export default function About() {
                         </ul>
                         {[hobbies]}
                     </div>
-                    <div className="justify-center place-self-center mt-8 lg:pl-20">
+                    <div className="justify-center place-self-center mt-8 md:mt-2 lg:pl-20">
                         <Image
                             src="/snoopy-reading-yotsuba.jpg"
                             alt="Snoopy reading yotsuba"
@@ -66,7 +66,7 @@ export default function About() {
                     </div>
                 </div>
             </div>
-            <div className="w-full border border-french-gray dark:border-secondary-dark mt-10 mb-12 md:mt-16 md:mb-20" />
+            <div className="w-full border border-french-gray dark:border-secondary-dark mt-10 mb-12 md:mt-8 md:mb-20" />
             <div className="z-10 w-full max-w-5xl lg:flex flex-col">
                 <p className="text-4xl text-reseda-green font-bold font-satoshi pb-4 mt-2 whitespace-nowrap text-center lg:text-5xl lg:place-self-end"><i>what</i> have I done?</p>
                 <Experience />

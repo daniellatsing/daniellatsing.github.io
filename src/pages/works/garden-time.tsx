@@ -6,7 +6,7 @@ export default function GardenTime() {
     return (
         <div className="flex flex-col font-satoshi font-bold mx-auto">
             <div className="bg-gradient-to-b from-[#c7dac8] to-white flex-grow flex flex-col items-center pt-14 md:py-20">
-                <div className="flex flex-col justify-evenly items-center w-screen px-40 mx-auto md:flex-row">
+                <div className="flex flex-col justify-evenly items-center w-full max-w-7xl px-8 md:flex-row md:justify-center lg:justify-evenly">
                     <div className="text-center md:text-left mb-6 md:mb-0">
                         <p className="text-night pb-1 text-3xl lg:text-5xl text-nowrap">Garden Time</p>
                         <p className="text-night text-lg lg:text-4xl text-pretty">Pomodoro and To-do List Web Application</p>
@@ -18,7 +18,7 @@ export default function GardenTime() {
                             sizes="(min-width:320px) 20vw, (min-width:768px) 50vw, (min-width:1024px) 30vw"
                             width={0}
                             height={0}
-                            style={{ width: '70%', height: 'auto' }}
+                            style={{ width: '40%', height: 'auto' }}
                             priority={false}
                         />
                         <p className="sr-only">
@@ -58,8 +58,8 @@ export default function GardenTime() {
                         <p className="text-night">MongoDB</p>
                     </div>
                     <div className="mt-4 md:mt-0">
-                        <button className="bg-night divide-y divide-gray-100 w-46 h-auto dark:bg-gray-700 dark:divide-gray-600 px-4 py-2 rounded-full shadow-sm transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-md md:bg-white">
-                            <a href="https://github.com/info441-wi24/garden-time" className="text-white md:text-night">View Project</a>
+                        <button className="bg-night divide-y divide-gray-100 w-46 h-auto dark:bg-gray-700 dark:divide-gray-600 px-4 py-2 rounded-full shadow-sm transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-md lg:bg-white">
+                            <a href="https://github.com/info441-wi24/garden-time" className="text-white lg:text-night">View Project</a>
                         </button>
                     </div>
                 </div>

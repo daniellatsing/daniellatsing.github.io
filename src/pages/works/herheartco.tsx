@@ -6,7 +6,7 @@ export default function MSA() {
     return (
         <div className="flex flex-col font-satoshi font-bold mx-auto">
             <div className="bg-gradient-to-b from-[#f7b4a4] to-white flex-grow flex flex-col items-center pt-14 md:py-20">
-                <div className="flex flex-col items-center md:flex-row md:justify-center w-full max-w-7xl px-8">
+                <div className="flex flex-col items-center w-full max-w-7xl px-8 md:flex-row md:justify-center lg:justify-evenly">
                     <div className="text-center md:text-left mb-6 md:mb-0">
                         <p className="text-night pb-1 text-4xl lg:text-5xl">HerHeartCo</p>
                         <p className="text-night text-2xl md:text-nowrap lg:text-4xl">Mobile Application</p>

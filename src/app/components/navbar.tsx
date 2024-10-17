@@ -98,7 +98,7 @@ export default function NavBar() {
     ];
 
     return (
-        <nav className="relative w-full font-satoshi container mx-auto flex place-content-end items-center p-4 my-4 md:mt-14 md:mb-16">
+        <nav className="relative w-full font-satoshi container mx-auto flex place-content-end items-center p-4 my-4 md:my-8">
             <Link href="/" className="absolute left-0 pl-4 hidden md:block">
                 <Image 
                     src="/logo.svg" 

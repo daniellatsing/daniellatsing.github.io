@@ -6,7 +6,7 @@ export default function DearMJournal() {
     return (
         <div className="flex flex-col font-satoshi font-bold mx-auto">
             <div className="bg-gradient-to-b from-[#f7e5f0] to-white flex-grow flex flex-col items-center pt-14 lg:py-20">
-                <div className="flex flex-col items-center md:flex-row md:justify-center w-full max-w-7xl px-8">
+                <div className="flex flex-col items-center w-full max-w-7xl px-8 md:flex-row md:justify-center lg:justify-evenly">
                     <div className="text-center md:text-left mb-6 md:mb-0">
                         <p className="text-night pb-1 text-4xl lg:text-5xl">Dear.M Journal</p>
                         <p className="text-night text-2xl md:text-nowrap lg:text-4xl">Journal Web Application</p>
@@ -18,7 +18,7 @@ export default function DearMJournal() {
                             sizes="(min-width:320px) 20vw, (min-width:768px) 50vw, (min-width:1024px) 30vw"
                             width={0}
                             height={0}
-                            style={{ width: '45%', height: 'auto' }}
+                            style={{ width: '60%', height: 'auto' }}
                             priority={false}
                         />
                     </div>

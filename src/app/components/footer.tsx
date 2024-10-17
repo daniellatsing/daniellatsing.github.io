@@ -25,14 +25,14 @@ export default function Footer() {
     return (
         <div className="w-full font-satoshi">
             <div className="w-full border border-french-gray dark:border-secondary-dark mt-10 mb-12 md:mt-16 md:mb-20" />
-            <p className="text-center text-night font-bold sm:hidden md:text-2xl md:mb-16 hidden lg:block lg:text-4xl lg:py-4 lg:mb-36">Thank you for visiting :^)</p>
+            <p className="text-center text-night font-bold md:text-2xl md:mb-16 hidden lg:block lg:text-4xl lg:py-4 lg:mb-24">Thank you for visiting :^)</p>
             {/* Footer social links */}
-            <div className="container flex place-content-between mb-10 px-8 md:px-0 md:mb-18 sm:mb-20">
+            <div className=" flex place-content-between mb-10 px-8 md:px-12 md:mb-18 sm:mb-20">
                 <div className="align-start font-bold text-night">
                     <p className="text-xl md:text-4xl lg:text-5xl">&copy; 2024</p>
                     <p className="text-2xl md:text-5xl lg:text-6xl">Daniella Tsing</p>
                 </div>
-                <ul className="flex justify-center gap-2 md:gap-6 lg:gap-8 items-center">
+                <ul className="flex justify-center gap-2 items-center md:gap-6">
                     {socialLinks.map((link) => (
                     <Link
                         href={link.url}

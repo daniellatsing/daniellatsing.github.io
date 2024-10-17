@@ -32,7 +32,7 @@ export default function Footer() {
                     <p className="text-xl md:text-4xl lg:text-5xl">&copy; 2024</p>
                     <p className="text-2xl md:text-5xl lg:text-6xl">Daniella Tsing</p>
                 </div>
-                <ul className="flex justify-center gap-2 items-center md:gap-6">
+                <ul className="flex justify-center gap-1.5 items-center md:gap-6">
                     {socialLinks.map((link) => (
                     <Link
                         href={link.url}

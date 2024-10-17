@@ -34,7 +34,7 @@ export default function About() {
 
     return(
         <div id="about" className="flex min-h-screen flex-col place-items-center font-satoshi md:py-8 lg:py-24">
-            <div className="z-10 w-full max-w-6xl text-sm lg:flex flex-col px-20 md:mb-12 lg:mb-24">
+            <div className="z-10 w-full max-w-6xl text-sm lg:flex flex-col px-8 md:px-0 md:mb-12 lg:mb-24">
                 <h3 className="text-4xl text-reseda-green font-bold font-satoshi mb-4 whitespace-nowrap text-center md:mb-10 lg:text-left lg:text-5xl">about me</h3>
                 <div className="flex flex-col md:place-items-center lg:flex-row">
                     <div className="flex-col max-w-lg">

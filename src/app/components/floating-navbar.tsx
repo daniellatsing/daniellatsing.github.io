@@ -77,7 +77,12 @@ export const FloatingNav = ({
           </Link>
         ))}
         <button className="border text-sm font-medium relative border-neutral-200 dark:border-white/[0.2] text-night dark:text-white px-4 py-2 rounded-full hover:text-ash-gray">
-          <span>resume</span>
+          <Link 
+            href="https://drive.google.com/file/d/1LTKQe8D7K2CPIuEN9msG08PbAZuoispc/view?usp=sharing" 
+            className="hover:text-ash-gray dark:hover:text-indigo-400 place-self-center"
+          >
+            resume
+          </Link>
           <span className="absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r from-transparent via-blue-500 to-transparent h-px" />
         </button>
       </motion.div>

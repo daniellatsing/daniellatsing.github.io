@@ -50,14 +50,14 @@ export const BentoGridItem = ({
             </div>
             <div className="flex flex-col px-2">
                 <div className="flex items-center">
-                    <div className="flex-1 font-satoshi font-bold text-night text-lg dark:text-neutral-200 mt-2 truncate md:not-truncate md:text-xl">
+                    <div className="flex-1 font-satoshi font-bold text-night text-md dark:text-neutral-200 mt-2 md:text-lg lg:text-xl">
                         {title}
                     </div>
-                    <div className="font-satoshi font-bold text-paynes-gray text-md dark:text-neutral-200 mt-2">
+                    <div className="font-satoshi font-bold text-paynes-gray text-sm dark:text-neutral-200 mt-2 md:text-md">
                         {date}
                     </div>
                 </div>  
-                <div className="font-satoshi font-bold text-paynes-gray dark:text-neutral-300 text-lg md:text-xl ">
+                <div className="font-satoshi font-bold text-paynes-gray text-md dark:text-neutral-300 md:text-lg lg:text-xl ">
                     {description}
                 </div>
             </div>

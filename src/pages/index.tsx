@@ -81,7 +81,7 @@ export default function Home() {
     ]
 
     const home_blurb = (
-        <p className="font-bold text-davys-grey text-center text-base px-12 md:text-xl md:pb-6 md:px-20 lg:text-left lg:px-0 lg:text-2xl">
+        <p className="font-bold text-davys-grey text-center text-base px-10 md:text-xl md:pb-6 md:px-20 lg:text-left lg:px-0 lg:text-2xl">
             I am a Seattle-based software developer with a passion 
             for designing intuitive and accessible solutions through 
             the implementation of code and human-centered design.

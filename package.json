@@ -16,6 +16,7 @@
     "@mui/material": "^6.1.2",
     "@mui/material-nextjs": "^6.1.1",
     "@svgr/webpack": "^8.1.0",
+    "@tabler/icons-react": "^3.19.0",
     "all": "^0.0.0",
     "clsx": "^2.1.1",
     "framer-motion": "^11.9.0",

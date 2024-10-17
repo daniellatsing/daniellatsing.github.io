@@ -5,17 +5,17 @@ export default function GardenTime() {
 
     return (
         <div className="flex flex-col font-satoshi font-bold mx-auto">
-            <div className="bg-gradient-to-b from-[#c7dac8] to-white flex-grow flex flex-col items-center py-20">
-                <div className="flex flex-row justify-evenly items-center w-screen px-40 mx-auto">
-                    <div>
-                        <p className="text-night pb-1 md:text-4xl lg:text-6xl">Garden Time</p>
-                        <p className="text-night md:text-2xl lg:text-4xl">Pomodoro and To-do List Web Application</p>
+            <div className="bg-gradient-to-b from-[#c7dac8] to-white flex-grow flex flex-col items-center pt-14 md:py-20">
+                <div className="flex flex-col justify-evenly items-center w-screen px-40 mx-auto md:flex-row">
+                    <div className="text-center md:text-left mb-6 md:mb-0">
+                        <p className="text-night pb-1 text-3xl lg:text-5xl text-nowrap">Garden Time</p>
+                        <p className="text-night text-lg lg:text-4xl text-pretty">Pomodoro and To-do List Web Application</p>
                     </div>
                     <div className="flex justify-center items-center w-full md:w-auto">
                         <Image
                             src="/project-thumbnails/garden-time-logo.png"
                             alt="Garden Time Logo"
-                            sizes="(min-width:320px) 50vw, (min-width:768px) 50vw, (min-width:1024px) 30vw"
+                            sizes="(min-width:320px) 20vw, (min-width:768px) 50vw, (min-width:1024px) 30vw"
                             width={0}
                             height={0}
                             style={{ width: '70%', height: 'auto' }}
@@ -26,22 +26,22 @@ export default function GardenTime() {
                         </p>
                     </div>
                 </div>
-                <div className="border max-w-7xl w-full my-12 border-night"></div>
-                <div className="text-md grid grid-rows-1 justify-items-center max-w-7xl mx-auto px-8 text-center md:grid-cols-3 md:gap-y-8 lg:grid-cols-[repeat(5,1fr)] lg:gap-x-8 lg:text-lg lg:text-left">
-                    <div>
+                <div className="border my-12 border-night w-4/5 lg:max-w-7xl lg:w-full" />
+                <div className="text-sm grid grid-rows-1 justify-items-center max-w-7xl mx-auto px-8 text-center grid-cols-2 md:grid-cols-3 md:gap-y-8 lg:grid-cols-[repeat(6,1fr)] lg:gap-x-8 lg:text-lg lg:text-left">
+                    <div className="mb-2 md:mb-0">
                         <p className="text-davys-grey">Role</p>
                         <p className="text-night">Full Stack Engineer</p>
                         <p className="text-night">UX Designer</p>
                     </div>
-                    <div>
+                    <div className="mb-2 md:mb-0">
                         <p className="text-davys-grey">Duration</p>
                         <p className="text-night">3 months</p>
                     </div>
-                    <div>
+                    <div className="mb-2 md:mb-0">
                         <p className="text-davys-grey">Team</p>
                         <p className="text-night">4 Software Engineers</p>
                     </div>
-                    <div>
+                    <div className="mb-2 md:mb-0">
                         <p className="text-davys-grey">Skills</p>
                         <p className="text-night">Information Architecture</p>
                         <p className="text-night">Wireframing & Prototyping</p>
@@ -49,7 +49,7 @@ export default function GardenTime() {
                         <p className="text-night">JavaScript</p>
                         <p className="text-night">HTML & CSS</p>
                     </div>
-                    <div>
+                    <div className="mb-2 md:mb-0">
                         <p className="text-davys-grey">Tools</p>
                         <p className="text-night">Figma</p>
                         <p className="text-night">FigJam</p>
@@ -57,9 +57,9 @@ export default function GardenTime() {
                         <p className="text-night">Microsoft Azure</p>
                         <p className="text-night">MongoDB</p>
                     </div>
-                    <div>
-                        <button className="bg-white divide-y divide-gray-100 w-46 h-auto dark:bg-gray-700 dark:divide-gray-600 px-4 py-2 rounded-full shadow-sm transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-md">
-                            <a href="https://github.com/info441-wi24/garden-time" className="text-night">View Project</a>
+                    <div className="mt-4 md:mt-0">
+                        <button className="bg-night divide-y divide-gray-100 w-46 h-auto dark:bg-gray-700 dark:divide-gray-600 px-4 py-2 rounded-full shadow-sm transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-md md:bg-white">
+                            <a href="https://github.com/info441-wi24/garden-time" className="text-white md:text-night">View Project</a>
                         </button>
                     </div>
                 </div>

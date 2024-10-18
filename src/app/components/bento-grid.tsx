@@ -45,7 +45,7 @@ export const BentoGridItem = ({
         )}
     >
         <Link href={link ?? "#"} rel="noopener noreferrer">
-            <div className="rounded-md hover:shadow-md hover:-translate-y-1 transition duration-200 shadow-input dark:shadow-none p-2 dark:bg-black dark:border-white/[0.2] bg-white-two border border-french-gray flex flex-col">
+            <div className="rounded-md hover:shadow-md hover:-translate-y-1 transition duration-200 shadow-input dark:shadow-none p-2 dark:bg-white-two dark:border-white/[0.2] bg-white-two border border-french-gray flex flex-col">
                 {header}
             </div>
             <div className="flex flex-col px-2">
@@ -53,11 +53,11 @@ export const BentoGridItem = ({
                     <div className="flex-1 font-satoshi font-bold text-night text-lg dark:text-neutral-200 mt-2 truncate md:not-truncate md:text-xl">
                         {title}
                     </div>
-                    <div className="font-satoshi font-bold text-paynes-gray text-md dark:text-neutral-200 mt-2">
+                    <div className="font-satoshi font-bold text-paynes-gray text-md mt-2 dark:text-cadet-gray">
                         {date}
                     </div>
                 </div>  
-                <div className="font-satoshi font-bold text-paynes-gray dark:text-neutral-300 text-lg md:text-xl ">
+                <div className="font-satoshi font-bold text-paynes-gray text-lg md:text-xl dark:text-cadet-gray">
                     {description}
                 </div>
             </div>

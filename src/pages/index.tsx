@@ -6,19 +6,19 @@ export default function Home() {
     const words = [
         {
             text: "hi",
-            className: "font-bold font-satoshi text-night text-4xl mb-4 mt-2 md:mb-10 md:text-5xl"
+            className: "font-bold font-satoshi text-night text-4xl mb-4 mt-2 md:mb-10 md:text-5xl dark:text-white"
         },
         {
             text: "there,",
-            className: "font-bold font-satoshi text-night text-4xl mb-4 mt-2 md:mb-10 md:text-5xl"
+            className: "font-bold font-satoshi text-night text-4xl mb-4 mt-2 md:mb-10 md:text-5xl dark:text-white"
         },
         {
             text: "i'm",
-            className: "font-bold font-satoshi text-night text-4xl mb-4 mt-2 md:mb-10 md:text-5xl"
+            className: "font-bold font-satoshi text-night text-4xl mb-4 mt-2 md:mb-10 md:text-5xl dark:text-white"
         },
         {
             text: "daniella",
-            className: "font-bold font-satoshi text-reseda-green text-4xl mb-4 mt-2 md:mb-10 md:text-5xl"
+            className: "font-bold font-satoshi text-reseda-green text-4xl mb-4 mt-2 md:mb-10 md:text-5xl dark:text-cambridge-blue"
         }
     ]
 
@@ -81,7 +81,7 @@ export default function Home() {
     ]
 
     const home_blurb = (
-        <p className="font-bold text-davys-grey text-center text-base px-12 md:text-xl md:pb-6 md:px-20 lg:text-left lg:px-0 lg:text-2xl">
+        <p className="font-bold text-davys-grey text-center text-base px-12 md:text-xl md:pb-6 md:px-20 lg:text-left lg:px-0 lg:text-2xl dark:text-white">
             I am a Seattle-based software developer with a passion 
             for designing intuitive and accessible solutions through 
             the implementation of code and human-centered design.
@@ -98,7 +98,7 @@ export default function Home() {
             </div>
             <div className="w-full border border-french-gray dark:border-secondary-dark mt-10 mb-12 md:mt-16 md:mb-20" />
             <div id="works" className="z-10 w-full max-w-6xl lg:flex lg:flex-col">
-                <h3 className="text-4xl text-center md:text-5xl text-reseda-green font-bold mb-8 md:pb-16 lg:text-left">works</h3>
+                <h3 className="text-4xl text-center md:text-5xl text-reseda-green font-bold mb-4 md:pb-16 lg:text-left dark:text-cambridge-blue">works</h3>
                 <BentoGrid className="projects px-4 md:px-10 lg:px-0">
                     {works.map((card, i) => (
                         <BentoGridItem 

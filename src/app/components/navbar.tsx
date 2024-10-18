@@ -100,21 +100,29 @@ export default function NavBar() {
     return (
         <nav className="relative w-full font-satoshi container mx-auto flex place-content-end items-center p-4 my-4 md:my-8">
             <Link href="/" className="absolute left-0 pl-4 hidden md:block">
-                <Image 
-                    src="/logo.svg" 
-                    alt="Logo" 
-                    width={0}
-                    height={0}
-                    style={{ width: '75%', height: 'auto' }}
-                    priority={true} 
-                />
+            <Image 
+                src="/logo.svg"
+                alt="Logo" 
+                width={0}
+                height={0}
+                className="w-[75%] h-auto dark:hidden"
+                priority={true} 
+            />
+            <Image 
+                src="/logo-dark.svg"
+                alt="Logo Dark" 
+                width={0}
+                height={0}
+                className="hidden w-[75%] h-auto dark:block"
+                priority={true} 
+            />
             </Link>
             <div className="flex justify-center gap-4 items-center font-bold text-lg text-night md:text-2xl md:gap-8">
-                <Link href="/" className="hover:text-ash-gray dark:hover:text-indigo-400 transition duration-300 ease-in-out transform hover:-translate-y-1 md:hidden">home</Link>
-                <Link href="/about" className="hover:text-ash-gray dark:hover:text-indigo-400 transition duration-300 ease-in-out transform hover:-translate-y-1">about</Link>
+                <Link href="/" className="hover:text-ash-gray transition duration-300 ease-in-out transform hover:-translate-y-1 md:hidden dark:hover:text-ash-gray dark:text-white">home</Link>
+                <Link href="/about" className="hover:text-ash-gray transition duration-300 ease-in-out transform hover:-translate-y-1 dark:hover:text-ash-gray dark:text-white">about</Link>
                 {!isMobileOrTablet ? (
                     <div 
-                        className="hover:text-ash-gray dark:hover:text-indigo-400 transition duration-300 ease-in-out transform hover:-translate-y-1"
+                        className="hover:text-ash-gray transition duration-300 ease-in-out transform hover:-translate-y-1 dark:hover:text-ash-gray dark:text-white"
                         onMouseEnter={() => setDropdownOpen(true)}
                         onMouseLeave={() => setDropdownOpen(false)}
                     >
@@ -124,17 +132,17 @@ export default function NavBar() {
                         </button>
                         {dropdownOpen && (
                             <div 
-                                className="absolute bg-white divide-y divide-gray-100 rounded-lg shadow w-46 h-auto dark:bg-gray-700 dark:divide-gray-600 px-2" 
+                                className="absolute bg-white divide-y divide-gray-100 rounded-lg shadow w-46 h-auto dark:bg-night dark:divide-gray-800 px-2" 
                                 role="menu" 
                                 aria-orientation="vertical" 
                                 aria-labelledby="menu-button"
                             >
-                                <div className="py-2 text-sm text-night">
+                                <div className="py-2 text-sm text-night dark:text-white">
                                     {worksItems.map((item) => (
                                         <Link 
                                             key={item.name} 
                                             href={item.link} 
-                                            className="block px-2 py-3 hover:bg-gray-50 dark:hover:bg-gray-600 dark:hover:text-white hover:text-ash-gray dark:hover:text-indigo-400 whitespace-nowrap" 
+                                            className="block px-2 py-3 hover:bg-gray-50 dark:hover:bg-night dark:hover:text-ash-gray hover:text-ash-gray whitespace-nowrap" 
                                             tabIndex={0}
                                         >
                                             {item.name}
@@ -147,7 +155,7 @@ export default function NavBar() {
                 ) : (
                     <button 
                         type="button" 
-                        className="hover:text-ash-gray dark:hover:text-white transition duration-300 ease-in-out transform hover:-translate-y-1"
+                        className="hover:text-ash-gray transition duration-300 ease-in-out transform hover:-translate-y-1 dark:hover:text-ash-gray dark:text-white"
                         onClick={handleWorksClick}
                     >
                         works
@@ -156,7 +164,7 @@ export default function NavBar() {
                 <button className="border border-davys-gray py-1 px-3 rounded-full shadow-sm transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-md md:py-2 md:px-4">
                     <Link 
                         href="https://drive.google.com/file/d/1LTKQe8D7K2CPIuEN9msG08PbAZuoispc/view?usp=sharing" 
-                        className="hover:text-ash-gray dark:hover:text-indigo-400 place-self-center"
+                        className="hover:text-ash-gray dark:hover:text-ash-gray dark:text-white place-self-center"
                     >
                         resume
                     </Link>

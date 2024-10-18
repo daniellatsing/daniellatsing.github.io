@@ -31,6 +31,9 @@ module.exports = {
         'night': '#0b100d',
         'davys-grey': '#4e4e4e',
         'ash-gray': '#a4d4d4',
+        // DARK MODE
+        'cambridge-blue': '#8EA58D',
+        'cadet-gray': '#89A2A9',
       },
     },
   },
